@@ -1,0 +1,51 @@
+body {
+  background-color: #003e57;
+}
+
+#timer {
+  padding: 10%;
+  text-align: center;
+  color: white;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 60px;
+}
+
+.ui {
+  text-align: center;
+  padding: 30px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #0dcf06;
+}
+
+.button1:hover {
+  background-color: #0dcf06;
+  color: white;
+}
+
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #cf1406;
+}
+
+.button2:hover {
+  background-color: #cf1406;
+  color: white;
+}

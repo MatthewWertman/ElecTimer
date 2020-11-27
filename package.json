@@ -1,0 +1,76 @@
+{
+    "name": "ElecTimer",
+    "productName": "ElecTimer",
+    "version": "1.0.2",
+    "description": "Basic timer app using Electron 11",
+    "license": "MIT",
+    "homepage": "https://github.com/MatthewWertman/electron-timer-app",
+    "repository": " MatthewWertman/electron-timer-app",
+    "author": {
+        "name": "Matthew Wertman",
+        "email": "mattwert@charter.net",
+        "url": "https://github.com/MatthewWertman"
+    },
+    "scripts": {
+        "postinstall": "electron-builder install-app-deps",
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder --macos --linux --windows"
+    },
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^11.0.2",
+        "electron-builder": "^22.9.1",
+        "eslint": "^7.14.0",
+        "eslint-config-airbnb-base": "^11.3.2",
+        "eslint-config-standard": "^10.2.1",
+        "eslint-plugin-import": "^2.18.1",
+        "eslint-plugin-node": "^5.2.1",
+        "eslint-plugin-promise": "^3.8.0",
+        "eslint-plugin-standard": "^3.1.0"
+    },
+    "dependencies": {
+        "moment": "^2.29.1",
+        "moment-duration-format": "^2.3.2"
+    },
+    "build": {
+        "appId": "com.matthewwertman.electimer",
+        "mac": {
+            "category": "public.app-category.utilities",
+            "icon": "build/icon.png"
+        },
+        "dmg": {
+            "icon": "build/icon.png",
+            "iconSize": 160,
+            "contents": [
+                {
+                    "x": 180,
+                    "y": 170
+                },
+                {
+                    "x": 480,
+                    "y": 170,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb"
+            ],
+            "category": "Utility"
+        },
+        "deb": {
+            "maintainer": "MatthewWertman"
+        },
+        "win": {
+            "icon": "build/icon.png",
+            "target": [
+                "nsis",
+                "portable"
+            ]
+        }
+    }
+}
