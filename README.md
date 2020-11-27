@@ -1,8 +1,9 @@
 ## ElecTimer
 
+[![Build Status](https://travis-ci.com/MatthewWertman/ElecTimer.svg?token=QpXxGRjLbyC4WsfsZHkV&branch=deploy_build)](https://travis-ci.com/MatthewWertman/ElecTimer)
 ![alt text](electimer-150x150.png "ElecTimer Logo")
 
-This is a basic timer app made using [electron](https://www.electronjs.org).
+ElecTimer aims to be a cross-platform speedrun timer application powered by [electron](https://www.electronjs.org).
 
 ### Prerequisites
 * **[Node.js v12](https://nodejs.org/en/download/)** or higher
