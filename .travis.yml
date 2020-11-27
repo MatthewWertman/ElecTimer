@@ -1,0 +1,22 @@
+os: osx
+osx_image: xcode10.2
+language: node_js
+node_js: '12'
+if: tag IS blank AND branch = deploy_build
+deploy:
+    provider: releases
+    api_key:
+        secure: ikK+v9iaQ7L2SOpY98qtXxJIiMg+k/NrLn6FtiUpJ6Z7oKQ9WQ6WNnfI/s3RmCHPkWuQlyC2atRtiI9q7IzHyC8uXqFtksL8TN0HEzdV3uAulemOTZZrGvfUfcDzKYTYy2T7ZdUPnYDSSVSncdd+3lGlrJlZbI311Y4cjfKv/Zh2tvxGj74p23wc1wzSq06OZeBQIG4jkaNM8xRaRA9LO7R4AESY0/g+HPZgi5yC0il6dBQ9pW2Y8NisWPYOw7k+W/L1Vm9Liq3mOuoD/NED+OKu7kJ/SCZSScPhDPANrmlfUoodBMihJu7Ys1DAZdKXTN4wd+dUOtCZssG26hUKUmYcAshhqSV7tVqYzBegM+dq6qaINjL6b6NBVdA/mayZo4xtjSPiRXm6LjTOS0+dLoktbll/q57rM4R5vS/xnmdiAlXlaGdemP+3Cz92S8jKZ37wIOV74EGgVbi5sAtTaNOS3lOvli7AZRbG9Dpr2ovzweo1DNB5IL8d6VncE3PbeAeYtmfrlBl1KlBjM8drlbY6qSdfc/ZNvGOEIkgSdsDjKiyxF9j+m43aAuVRXwKfyuOiS0CAtONIBpa1o9Vw8Ely7DrcZ8nyTaxeEdqYM7Vu0ZFxRAfLVaJX6++HTbAqJxlCUCLOKBYbpzjUbGAjVsfiHus9hu/Gvikd5JoJxx0=
+    file_glob: true
+    file:
+        - dist/*.dmg
+        - dist/*.zip
+        - dist/*.exe
+        - dist/*.AppImage
+        - dist/*.deb
+    skip_cleanup: true
+    draft: true
+    on:
+        branch: deploy_build
+script:
+    - npm run dist
