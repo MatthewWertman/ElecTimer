@@ -3,10 +3,11 @@ const {app, BrowserWindow, globalShortcut} = require("electron");
 function createWindow () {
     const win = new BrowserWindow({
         title: app.name,
-        width: 800,
-        heigt: 600,
-        //width: 300,
-        //height: 85,
+        //width: 800,
+        //heigt: 600,
+        width: 300,
+        height: 85,
+        frame: false,
         icon: "build/icon.png",
         webPreferences: {
             nodeIntegration: true
@@ -14,7 +15,7 @@ function createWindow () {
     });
 
     win.loadFile("./base/index.html");
-    win.openDevTools();
+    //win.openDevTools();
 
     //globals
     globalShortcut.register("num1", () => {
