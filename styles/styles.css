@@ -15,7 +15,7 @@ body {
   font-size: 60px;
 }
 
-.button {
+.btn {
   pointer-events: none;
   cursor: not-allowed;
   display: none;
