@@ -8,7 +8,6 @@
     "repository": " MatthewWertman/electron-timer-app",
     "author": {
         "name": "Matthew Wertman",
-        "email": "mattwert@charter.net",
         "url": "https://github.com/MatthewWertman"
     },
     "scripts": {
@@ -60,10 +59,8 @@
                 "AppImage",
                 "deb"
             ],
-            "category": "Utility"
-        },
-        "deb": {
-            "maintainer": "MatthewWertman"
+            "category": "Utility",
+            "icon": "build/icon.png"
         },
         "win": {
             "icon": "build/icon.png",
