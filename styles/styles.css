@@ -4,6 +4,7 @@ body {
   height: 100vh;
   overflow: hidden;
   -webkit-app-region: drag;
+  font-family: monospace;
 }
 
 #timer {
@@ -11,7 +12,6 @@ body {
   right: 10px;
   bottom: 10px;
   color: white;
-  font-family: monospace;
   font-size: 16vw;
 }
 
@@ -19,4 +19,16 @@ body {
   pointer-events: none;
   cursor: not-allowed;
   display: none;
+}
+
+#splitContainer {
+    position: sticky;
+    color: white;
+    font-size: 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.split {
+    padding-right: 10px;
 }
