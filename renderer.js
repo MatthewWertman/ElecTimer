@@ -12,16 +12,24 @@ const resetBtn = document.getElementById("reset-button");
 let runningWatch;
 let isRunning = false;      //Bool if stopwatch is running
 
+function format_time (time) {
+    return moment.duration(time, "milliseconds").format("hh:mm:ss.SS", {stopTrim: "s"});
+}
+
+function update () {
+    $time.innerHTML = format_time(sw.time);
+}
+
 function startTimer () {
     isRunning = true;
-    $time.style.color = "#0fe300";
+    $time.style.color = "#8beb15";
     runningWatch = setInterval(update, 1);
     sw.start();
 }
 
 function stopTimer () {
     isRunning = false;
-    $time.style.color = "#a5a5a5";
+    $time.style.color = "#5d6267";
     sw.stop();
     clearInterval(runningWatch);
 }
@@ -31,14 +39,6 @@ function resetTimer () {
     $time.style.color = "white";
     sw.reset();
     update();
-}
-
-function format_time (time) {
-    return moment.duration(time, "milliseconds").format("hh:mm:ss.SS", {stopTrim: "s"});
-}
-
-function update () {
-    $time.innerHTML = format_time(sw.time);
 }
 
 startBtn.addEventListener("click", () => {
