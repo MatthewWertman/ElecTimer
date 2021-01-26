@@ -18,7 +18,7 @@
     },
     "main": "main.js",
     "devDependencies": {
-        "electron": "^11.0.2",
+        "electron": "^11.2.1",
         "electron-builder": "^22.9.1",
         "eslint": "^7.14.0"
     },
