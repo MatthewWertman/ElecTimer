@@ -4,31 +4,31 @@
     <meta charset="utf-8">
     <title>ElecTimer</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles/electimer.css">
 </head>
-    <body>
-        <div id="elecTimer">
-            <div id="splitsLayout">
-                <div class="splitsTitle">Untitled</div>
-                <div id="splitsContainer">
-                    <div class="split">
-                        <span class="name">Time</span>
-                        <output class="time">03.00</output>
-                    </div>
-                    <div class="split">
-                        <span class="name">Time</span>
-                        <output class="time">-</output>
-                    </div>
+<body>
+    <div id="elecTimer">
+        <div id="splitsLayout">
+            <div class="splitsTitle">Untitled</div>
+            <div id="splitsContainer">
+                <div class="split">
+                    <span class="name">Time</span>
+                    <output class="time">03.00</output>
+                </div>
+                <div class="split">
+                    <span class="name">Time</span>
+                    <output class="time">-</output>
                 </div>
             </div>
-            <div id="timerContainer">
-                <output id="timer">00.00</output>
-            </div>
         </div>
-        <!-- Invisible Buttons for global shortcuts -->
-        <button id="startButton"></button>
-        <button id="stopButton"></button>
-        <button id="resetButton"></button>
-        <script>require("../renderer.js")</script>
-    </body>
+        <div id="timerContainer">
+            <output id="timer">00.00</output>
+        </div>
+    </div>
+    <!-- Invisible Buttons for global shortcuts -->
+    <button id="start-button"></button>
+    <button id="stop-button"></button>
+    <button id="reset-button"></button>
+    <script>require("../renderer.js")</script>
+</body>
 </html>
