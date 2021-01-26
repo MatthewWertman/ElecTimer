@@ -3,7 +3,7 @@ const moment = require("moment");
 require("moment-duration-format");
 
 // stopwatch class
-const StopWatch = require("../class/StopWatch.js");
+const StopWatch = require("./class/StopWatch.js");
 const sw = new StopWatch;
 
 const $time = document.getElementById("timer");
@@ -63,42 +63,38 @@ function update () {
 //     $time.innerHTML = new Date(sw.time).toISOString().substr(17,5);
 // }
 
-function start () {
+function startTimer () {
     isRunning = true;
     $time.style.color = "#0fe300";
     runningWatch = setInterval(update, 1);
     sw.start();
 }
 
-function stop () {
+function stopTimer () {
     isRunning = false;
     $time.style.color = "#a5a5a5";
     sw.stop();
     clearInterval(runningWatch);
 }
 
-function reset () {
-    stop();
+function resetTimer () {
+    stopTimer();
     $time.style.color = "white";
     sw.reset();
-    removeSplits();
+    //removeSplits();
     update();
 }
 
 startBtn.addEventListener("click", () => {
-    if (isRunning) {
-        createSplit("Time", sw.time);
-    } else {
-        start();
-    }
+    startTimer();
 });
 stopBtn.addEventListener("click", () => {
     if (isRunning) {
-        stop();
+        stopTimer();
     } else {
-        start();
+        startTimer();
     }
 });
 resetBtn.addEventListener("click", () => {
-    reset();
+    resetTimer();
 });

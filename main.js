@@ -13,7 +13,7 @@ function createWindow () {
         }
     });
 
-    win.loadFile("./base/index.html");
+    win.loadFile("views/electimer.html");
     if (isDebugging) {
         win.openDevTools({mode: "right"});
     }
