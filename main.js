@@ -23,16 +23,19 @@ function createWindow () {
 
     // Global shortcuts
     globalShortcut.register("num1", () => {
-        console.log("Pressed num1");
-        mainWindow.webContents.executeJavaScript("document.getElementById('start-button').click()");
+        // console.log("Pressed num1");
+        // mainWindow.webContents.executeJavaScript("document.getElementById('start-button').click()");
+        mainWindow.webContents.send("start");
     });
     globalShortcut.register("num5", () => {
-        console.log("Pressed num5");
-        mainWindow.webContents.executeJavaScript("document.getElementById('stop-button').click()");
+        // console.log("Pressed num5");
+        // mainWindow.webContents.executeJavaScript("document.getElementById('stop-button').click()");
+        mainWindow.webContents.send("stop");
     });
     globalShortcut.register("num3", () => {
-        console.log("Pressed num3");
-        mainWindow.webContents.executeJavaScript("document.getElementById('reset-button').click()");
+        // console.log("Pressed num3");
+        // mainWindow.webContents.executeJavaScript("document.getElementById('reset-button').click()");
+        mainWindow.webContents.send("reset");
     });
 }
 

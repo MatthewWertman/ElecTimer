@@ -1,3 +1,4 @@
+const { ipcRenderer } = require("electron");
 const moment = require("moment");
 require("moment-duration-format");
 
@@ -6,9 +7,6 @@ const StopWatch = require("./class/StopWatch.js");
 const sw = new StopWatch;
 
 const $time = document.getElementById("timer");
-const startBtn = document.getElementById("start-button");
-const stopBtn = document.getElementById("stop-button");
-const resetBtn = document.getElementById("reset-button");
 let runningWatch;
 let isRunning = false;      //Bool if stopwatch is running
 
@@ -41,20 +39,21 @@ function resetTimer () {
     update();
 }
 
-startBtn.addEventListener("click", () => {
+ipcRenderer.on("start", () => {
     startTimer();
 });
-stopBtn.addEventListener("click", () => {
+
+ipcRenderer.on("stop", () => {
     if (isRunning) {
         stopTimer();
     } else {
         startTimer();
     }
 });
-resetBtn.addEventListener("click", () => {
+
+ipcRenderer.on("reset", () => {
     resetTimer();
 });
-
 
 // function createSplit (titleText, time) {
 
