@@ -23,12 +23,15 @@ function createWindow () {
 
     // Global shortcuts
     globalShortcut.register("num1", () => {
+        console.log("Pressed num1");
         mainWindow.webContents.executeJavaScript("document.getElementById('start-button').click()");
     });
     globalShortcut.register("num5", () => {
+        console.log("Pressed num5");
         mainWindow.webContents.executeJavaScript("document.getElementById('stop-button').click()");
     });
     globalShortcut.register("num3", () => {
+        console.log("Pressed num3");
         mainWindow.webContents.executeJavaScript("document.getElementById('reset-button').click()");
     });
 }
