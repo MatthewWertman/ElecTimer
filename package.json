@@ -4,10 +4,14 @@
     "version": "1.0.3",
     "description": "Basic timer app using Electron 11",
     "license": "MIT",
-    "homepage": "https://github.com/MatthewWertman/electron-timer-app",
-    "repository": " MatthewWertman/electron-timer-app",
+    "homepage": "https://github.com/MatthewWertman/ElecTimer",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MatthewWertman/ElecTimer.git"
+    },
     "author": {
         "name": "Matthew Wertman",
+        "email": "mattwert@charter.net",
         "url": "https://github.com/MatthewWertman"
     },
     "scripts": {
@@ -55,6 +59,9 @@
             ],
             "category": "Utility",
             "icon": "build/icon.png"
+        },
+        "deb": {
+            "maintainer": "MatthewWertman"
         },
         "win": {
             "icon": "build/icon.png",
