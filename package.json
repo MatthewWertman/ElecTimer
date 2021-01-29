@@ -18,7 +18,8 @@
         "postinstall": "electron-builder install-app-deps",
         "start": "electron .",
         "pack": "electron-builder --dir",
-        "dist": "electron-builder --macos --linux --windows"
+        "dist": "electron-builder --macos --linux --windows",
+        "dev": "electronmon ."
     },
     "main": "main.js",
     "devDependencies": {

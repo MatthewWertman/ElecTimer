@@ -43,7 +43,7 @@ function startTimer () {
 
 function stopTimer () {
     isRunning = false;
-    $time.style.color = "#5d6267";
+    $time.style.color = "#727272";
     sw.stop();
     clearInterval(runningWatch);
 }
