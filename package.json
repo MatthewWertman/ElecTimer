@@ -17,15 +17,20 @@
     "scripts": {
         "postinstall": "electron-builder install-app-deps",
         "start": "electron .",
+        "dev": "electronmon .",
+        "test": "mocha",
         "pack": "electron-builder --dir",
-        "dist": "electron-builder --macos --linux --windows",
-        "dev": "electronmon ."
+        "dist": "electron-builder --macos --linux --windows"
     },
     "main": "main.js",
     "devDependencies": {
         "electron": "^11.2.1",
         "electron-builder": "^22.9.1",
-        "eslint": "^7.18.0"
+        "electron-log": "^4.3.1",
+        "electronmon": "^1.1.2",
+        "eslint": "^7.18.0",
+        "mocha": "^8.2.1",
+        "spectron": "^13.0.0"
     },
     "dependencies": {},
     "build": {
