@@ -1,13 +1,11 @@
 const { app, BrowserWindow, globalShortcut} = require("electron");
 
-const isDebugging = true;       //Bool for debugging
+const isDebugging = false;       //Bool for debugging
 function createWindow () {
     const mainWindow = new BrowserWindow({
         title: app.name,
-        width: isDebugging ? 800 : 400,
-        height: isDebugging ? 600 : 550,
-        minWidth: 160,
-        minHeight: 550,
+        width: isDebugging ? 800 : 300,
+        height: isDebugging ? 600 : 85,
         frame: false,
         icon: "./build/icon.png",
         webPreferences: {

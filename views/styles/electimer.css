@@ -6,23 +6,24 @@ body {
   color: white;
   font-family: monospace;
   background-color: #003e57;
+  -webkit-app-region: drag;
 }
 
 #elecTimer {
   margin: 8px;
 }
 
-#splitsLayout {
+/* #splitsLayout {
   padding: 5px;
   font-size: 5vw;
-  -webkit-app-region: drag;
+
 }
 
 .splitsTitle {
   font-size: 6vw;
   text-align: center;
   border-bottom: 2px solid #7b7b7b;
-}
+} */
 
 #timer {
   position: absolute;
@@ -31,7 +32,7 @@ body {
   font-size: 13vw;
 }
 
-#splitsContainer .split {
+/* #splitsContainer .split {
   display: flex;
   position: sticky;
   justify-content: space-between;
@@ -46,7 +47,7 @@ body {
 
 .split .time{
   padding-right: 10px;
-}
+} */
 
 #timeContainer {
   position: absolute;
@@ -56,8 +57,8 @@ body {
   font-size: 13vw;
 }
 
-button {
+/* button {
   pointer-events: none;
   cursor: not-allowed;
   display: none;
-}
+} */
