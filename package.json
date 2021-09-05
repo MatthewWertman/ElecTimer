@@ -1,7 +1,7 @@
 {
     "name": "ElecTimer",
     "productName": "ElecTimer",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Basic timer app using Electron 11",
     "license": "MIT",
     "homepage": "https://github.com/MatthewWertman/ElecTimer",
