@@ -13,41 +13,12 @@ body {
   margin: 8px;
 }
 
-/* #splitsLayout {
-  padding: 5px;
-  font-size: 5vw;
-
-}
-
-.splitsTitle {
-  font-size: 6vw;
-  text-align: center;
-  border-bottom: 2px solid #7b7b7b;
-} */
-
 #timer {
   position: absolute;
   right: 10px;
   bottom: 0;
   font-size: 13vw;
 }
-
-/* #splitsContainer .split {
-  display: flex;
-  position: sticky;
-  justify-content: space-between;
-  border-bottom: 1px solid #7b7b7b;
-  -webkit-app-region: no-drag;
-}
-
-.split:last-of-type {
-  background: rgb(0,212,255);
-  background: linear-gradient(180deg, rgba(0,212,255,1) 0%, rgba(5,191,229,1) 25%, rgba(8,182,218,1) 50%, rgba(4,194,232,1) 75%, rgba(0,212,255,1) 100%);
-}
-
-.split .time{
-  padding-right: 10px;
-} */
 
 #timeContainer {
   position: absolute;
@@ -56,9 +27,3 @@ body {
   padding-right: 10px;
   font-size: 13vw;
 }
-
-/* button {
-  pointer-events: none;
-  cursor: not-allowed;
-  display: none;
-} */
