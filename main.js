@@ -1,7 +1,7 @@
 const { app, BrowserWindow, globalShortcut } = require("electron");
 const path = require("path");
 
-const isDebugging = true;       //Bool for debugging
+const isDebugging = false;       //Bool for debugging
 
 function createWindow () {
     const mainWindow = new BrowserWindow({
