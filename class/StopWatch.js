@@ -8,7 +8,7 @@ const now = function () {   //Return right now in milliseconds
     return (new Date()).getTime();
 };
 
-class StopWatch {
+export class StopWatch {
     // default constructor
     start () {
         if (!start) { start = now(); }
@@ -27,5 +27,3 @@ class StopWatch {
         return lap + (start ? now() - start : 0);
     }
 }
-
-module.exports = StopWatch;

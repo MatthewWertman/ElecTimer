@@ -1,7 +1,8 @@
 const { app, BrowserWindow, globalShortcut } = require("electron");
-const path = require('path');
+const path = require("path");
 
-const isDebugging = false;       //Bool for debugging
+const isDebugging = true;       //Bool for debugging
+
 function createWindow () {
     const mainWindow = new BrowserWindow({
         title: app.name,
@@ -10,25 +11,26 @@ function createWindow () {
         frame: false,
         icon: "./build/icon.png",
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
+            nodeIntegration: false,
+            contextIsolation: true,
+            preload: path.join(__dirname, "preload.js")
         }
     });
 
-    mainWindow.loadFile("./views/electimer.html");
+    mainWindow.loadFile(path.join(__dirname, "./views/electimer.html"));
 
-    if (isDebugging) {
-        mainWindow.openDevTools({mode: "right"});
-    }
+    if (isDebugging) mainWindow.webContents.openDevTools({mode: "right"});
 
     // Global shortcuts
     globalShortcut.register("num1", () => {
-        mainWindow.webContents.send("start");
+        // send start message to elecTimer api
+        mainWindow.webContents.send("elecTimerAPI", "start");
     });
     globalShortcut.register("num5", () => {
-        mainWindow.webContents.send("stop");
+        mainWindow.webContents.send("elecTimerAPI", "stop");
     });
     globalShortcut.register("num3", () => {
-        mainWindow.webContents.send("reset");
+        mainWindow.webContents.send("elecTimerAPI", "reset");
     });
 }
 
