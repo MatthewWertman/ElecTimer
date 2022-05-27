@@ -1,4 +1,5 @@
-const { app, BrowserWindow, globalShortcut} = require("electron");
+const { app, BrowserWindow, globalShortcut } = require("electron");
+const path = require('path');
 
 const isDebugging = false;       //Bool for debugging
 function createWindow () {
@@ -9,7 +10,7 @@ function createWindow () {
         frame: false,
         icon: "./build/icon.png",
         webPreferences: {
-            nodeIntegration: true
+            preload: path.join(__dirname, 'preload.js')
         }
     });
 
