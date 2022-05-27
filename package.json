@@ -24,11 +24,11 @@
     },
     "main": "main.js",
     "devDependencies": {
-        "electron": "^18.0.3",
+        "electron": "^18.3.1",
         "electron-builder": "^22.14.13",
-        "electron-log": "^4.4.6",
+        "electron-log": "^4.4.7",
         "electronmon": "^2.0.2",
-        "eslint": "^8.12.0",
+        "eslint": "^8.16.0",
         "mocha": "^9.2.2",
         "spectron": "^19.0.0"
     },
