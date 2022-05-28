@@ -10,3 +10,13 @@ contextBridge.exposeInMainWorld(
         }
     }
 );
+
+window.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+    ipcRenderer.send("show-context-menu");
+});
+
+ipcRenderer.on("context-menu-command", (e, command) => {
+    // For now, we will just log to the console
+    console.log("Launching splits editor...");
+});

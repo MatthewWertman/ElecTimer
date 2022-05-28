@@ -1,4 +1,4 @@
-const { app, BrowserWindow, globalShortcut } = require("electron");
+const { app, BrowserWindow, globalShortcut, ipcMain, Menu } = require("electron");
 const path = require("path");
 
 const isDebugging = false;       //Bool for debugging
@@ -33,6 +33,21 @@ function createWindow () {
         mainWindow.webContents.send("elecTimerAPI", "reset");
     });
 }
+
+ipcMain.on("show-context-menu", (event) => {
+    const options = [
+        {
+            label: "Edit Splits",
+            click: () => { event.sender.send("context-menu-command", "launch-editor"); }
+        },
+        {
+            label: "Exit ElecTimer",
+            click: () => { app.quit(); }
+        }
+    ];
+    const menu = Menu.buildFromTemplate(options);
+    menu.popup(BrowserWindow.fromWebContents(event.sender));
+});
 
 app.whenReady().then(() => {
     createWindow();
