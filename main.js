@@ -17,7 +17,7 @@ function createWindow () {
         }
     });
 
-    mainWindow.loadFile(path.join(__dirname, "./views/electimer.html"));
+    mainWindow.loadFile(path.join(__dirname, "./views/index.html"));
 
     if (isDebugging) mainWindow.webContents.openDevTools({mode: "right"});
 
