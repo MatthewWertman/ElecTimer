@@ -1,4 +1,5 @@
 const { contextBridge, ipcRenderer } = require("electron");
+const path = require("path");
 
 contextBridge.exposeInMainWorld(
     "elecTimer", {
@@ -19,4 +20,6 @@ window.addEventListener("contextmenu", (e) => {
 ipcRenderer.on("context-menu-command", (e, command) => {
     // For now, we will just log to the console
     console.log("Launching splits editor...");
+    const editorModel = path.join(__dirname, "./views/models/editor.html");
+    window.open(`file:///${editorModel}`, "_blank");
 });
